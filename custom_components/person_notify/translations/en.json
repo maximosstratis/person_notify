@@ -1,0 +1,33 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Person Notify",
+        "description": "Adds the `person_notify.send` action, which notifies every device linked to a person, and a diagnostic sensor per person listing its notifiers."
+      }
+    },
+    "abort": {
+      "already_configured": "Person Notify is already configured.",
+      "single_instance_allowed": "Person Notify is already configured."
+    }
+  },
+  "services": {
+    "send": {
+      "name": "Send notification to person",
+      "description": "Notifies all devices associated with the selected people (via their device trackers). Check sensor.<person>_notify_targets to see which devices will be notified.",
+      "fields": {
+        "person": { "name": "Person", "description": "People to notify." },
+        "message": { "name": "Message", "description": "Notification body." },
+        "title": { "name": "Title", "description": "Optional title." },
+        "data": { "name": "Data", "description": "Extra data passed to mobile app notifications (actions, image, channel, ...). Ignored for plain notify entities." }
+      }
+    },
+    "get_targets": {
+      "name": "Get notify targets",
+      "description": "Returns the notifiers that would be used for the selected people.",
+      "fields": {
+        "person": { "name": "Person", "description": "People to inspect." }
+      }
+    }
+  }
+}

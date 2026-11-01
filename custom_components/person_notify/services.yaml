@@ -1,0 +1,31 @@
+send:
+  fields:
+    person:
+      required: true
+      selector:
+        entity:
+          domain: person
+          multiple: true
+    message:
+      required: true
+      example: "The front door was opened"
+      selector:
+        text:
+          multiline: true
+    title:
+      example: "Alert"
+      selector:
+        text:
+    data:
+      example: '{"actions": [{"action": "OPEN", "title": "Open"}]}'
+      selector:
+        object:
+
+get_targets:
+  fields:
+    person:
+      required: true
+      selector:
+        entity:
+          domain: person
+          multiple: true

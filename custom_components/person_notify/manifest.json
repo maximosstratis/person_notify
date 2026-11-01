@@ -1,0 +1,15 @@
+{
+  "domain": "person_notify",
+  "name": "Person Notify",
+  "after_dependencies": ["mobile_app"],
+  "codeowners": ["@maximosstratis"],
+  "config_flow": true,
+  "dependencies": ["person", "notify"],
+  "documentation": "https://github.com/maximosstratis/person_notify",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/maximosstratis/person_notify/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}
